@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
- <head>
-   <meta charset="utf-8">
-   <title> index </title>
- </head>
- <body>
-  Lorem ipsuma dolor sit amet, consectetur adipiscing elit. Proin risus ex, dictum in ullamcorper ac, porttitor id erat.
-  Integer auctor facilisis leo sit amet interdum. Vestibulum eu arcu blandit, tristique sem pellentesque, imperdiet justo. Phasellus vehicula augue id placerat lobortis. 
-  Proin bibendum sagittis elit ac pharetra. In feugiat consequat viverra. Aliquam tortor metus, consectetur sit amet turpis blandit, congue accumsan turpis. 
-  Morbi mi dui, tincidunt eu turpis sit amet, rutrum porta tortor. Nulla mattis et ipsum sed hendrerit. Etiam consequat tellus id lacus viverra, at pretium eros sodales.
- </body>
+
+<head>
+  <meta charset="utf-8">
+  <title> index </title>
+  <link href="../css/Assistance.css" rel="stylesheet">
+</head>
+
+<body>
+  <form action="Assistance.html" method="post">
+    <h1>Assistance</h1>
+    <p>Dites-nous ce qui vous arrive !<br>
+      Détaillez votre problème de façon à ce que nous vous comprenons bien. Nous vous répondrons le plus rapidement
+      possible.<br></p>
+    <input type="text" name="name" id="name" placeholder="Nom" required><br>
+    <input type="text" name="prenom" id="prenom" placeholder="Prénom" required><br>
+    <input type="tel" name="tel" id="tel" placeholder="Numéro de téléphone" required><br>
+    <textarea name="problemes" cols="50" rows="5" placeholder="Ecrivez votre problème ici"></textarea><br>
+    <input type="submit" name="valid" id="valid" value="Envoyer">
+  </form>
+</body>
+
 </html>
