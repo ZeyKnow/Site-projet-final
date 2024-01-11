@@ -1,0 +1,145 @@
+body{
+    background: linear-gradient(45deg, rgb(34, 33, 33), rgb(106, 104, 104));
+    height: 100vh;
+
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color : whitesmoke; 
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, .3);
+    
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color : gold;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+.slide{
+    float:left;
+    width:  700px;
+   height: 800px;
+}
+
+.slides{
+   width: calc(700px * 3);              /* definit le cadre des slide des photos ici 3*/
+   animation: glisse 10s infinite;      /*durer du slider répéter à l'infini*/
+   
+}
+
+.slider{
+    width:  700px;
+    height: 800px;
+    overflow: hidden;                       /* superpose les images*/
+    float: right;
+    background: rgb(255, 255, 255, .0);  /*Arriere plan blanc avec moins d'opacité pour transparent*/
+    height: 800px;
+    border: 5px solid black;
+    box-shadow: 5px 5px 80px -6px black;
+
+}
+
+@keyframes glisse{                          /*definit lestemps d'arret et de mouvement des images*/
+    0% {
+        transform: translateX(0) ;
+    }
+    10% {
+        transform: translateX(0) ;
+    }
+    33% {
+        transform: translateX(-700px) ;
+    }
+    43% {
+        transform: translateX(-700px) ;
+    }
+    66% {
+        transform: translateX(-1400px) ;
+    }
+    76% {
+        transform: translateX(-1400px) ;
+    }
+    100% {
+        transform: translateX(0) ;
+    }
+
+}
+
+.présentation{              /*généralité sur la clé ledger*/
+    text-align: center;
+    text-transform: uppercase ;
+    font-size: 40px;
+}
+
+
+
+ol{
+    color: gray;
+    font-size: 25px;
+}
+
+.vendre{
+    border: 2px solid gold;
+    box-shadow: 5px 5px 80px -6px gold;
+    width: 300px;
+    height: 280px;
+    text-align: center;
+}
+
+.centrer{
+    display: flex;
+    justify-content: center;
+}
+
+.Bannière {
+    display: flex;
+    height: 100px;
+    background: linear-gradient(45deg, rgb(83, 81, 81), rgb(24, 23, 23)); /*Dégradé de couleur*/
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 1);
+   
+}
+
+img.Logo {
+    height: 108px;
+    position: absolute;
+    right: 00px;
+    top: 00px;
+}
+
+img.Logo {
+    height: 108px;
+    position: absolute;
+    right: 00px;
+    top: 00px;
+}
+
+img.fleche {
+    position: absolute;
+    left: 14px;
+    width: 3vh;
+    height: 3vh;
+}
+
+a.Accueil {
+    position: absolute; /*lien pour retourner à la page d'accueil*/
+    left: 46px;
+    width: 3vh;
+    height: 3vh;
+    font-size: 2vh;
+    color: gold;
+    transition: all .3s;
+}
+
+a:hover {
+    text-shadow: 5px 5px 8px black;
+    color: rgb(201, 174, 22);
+}
