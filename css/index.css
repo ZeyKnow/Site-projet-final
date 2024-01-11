@@ -201,35 +201,31 @@ body {
     transition: all 0.1s 0.2s ease-in-out;
 }
 
-.blob-8 {
-    background:darksalmon ;
-    transition: all 0.1s 0.2s ease-in-out;
-}
-
 /*Animation*/
 
 .container-menu.active .blob-1 {
-    left: 100%;
+    left: 95%;
+    top: 35%
 }
 
 .container-menu.active .blob-2 {
-    top: 85%;
-    left: 85%;
+    top: 90%;
+    left: 80%;
 }
 
 .container-menu.active .blob-4 {
-    top: 85%;
-    left: 15%;
+    top: 90%;
+    left: 20%;
 }
 
 .container-menu.active .blob-5 {
-    top: 50%;
-    left: 0%;
+    top: 35%;
+    left: 5%;
 }
 
 .container-menu.active .blob-6 {
-    top: 15%;
-    left: 15%;
+    top: 0%;
+    left: 50%;
 }
 
 .container-menu.active .blob-8 {
