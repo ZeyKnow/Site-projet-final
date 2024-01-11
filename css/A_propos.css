@@ -67,6 +67,10 @@ a:hover {
     text-shadow: 2px 2px 4px black;
 }
 
+a.reseau {
+    color: gold;
+}
+
 .Bannière {
     display: flex;
     height: 100px;
