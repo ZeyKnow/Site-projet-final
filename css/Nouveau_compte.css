@@ -8,21 +8,21 @@ body {
 }
 
 form {
-    background: rgb(255, 255, 255, .3);  /*Arriere plan blanc avec moins d'opacité pour transparent*/
+    background: rgb(255, 255, 255, .3);
     padding: 3rem;
-    height: 340px;
-    border-radius: 20px;  /*Permet d'arrondir les angles*/
+    height: 400px;
+    border-radius: 20px;
     border: 1px solid black;
-    box-shadow: 5px 5px 80px -6px black; /*Pour les ombres, x, y, épaisseur du flou, taille ombre(agrandir ou rétrécir), couleur*/
+    box-shadow: 5px 5px 80px -6px black;
     text-align: center;
 }
 
 p {
     color: gold;
-    font-weight: 500; /*Epaisseur de la police*/
+    font-weight: 500;
     opacity: .7;
     font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, .3);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, .5);
 }
 
 a {
@@ -41,10 +41,10 @@ input {
     border: none;
     border-left: 1px solid rgb(255, 255, 255, .3);
     border-top: 1px solid rgb(255, 255, 255, .3);
-    padding: 1rem;
-    width: 200px;
+    padding: 1.2rem;
+    width: 250px;
     border-radius: 50px;
-    backdrop-filter: blur(10p);  /*On ajoute un flou (blur) au éléments en dessous*/
+    backdrop-filter: blur(10p);
     box-shadow: 4px 4px 60px rgb(0, 0, 0, .3);
     color: gold;
     text-shadow: 2px 2px 4px rgb(0, 0, 0, .3);
@@ -55,12 +55,11 @@ input {
 
 ::placeholder {
     color: white;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0, .3);
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, .2);
 }
 
-
 input:hover,
-input[type=email]:focus,             /* ","  =  (OU ALORS) et "focus" = Une fois qu'on est dans la case*/
+input[type=email]:focus,             /*(OU ALORS)*/
 input[type=password]:focus {
     background: rgba(255, 255, 255, .1);
     box-shadow: 4px 4px 60px 8px rgb(0, 0, 0, .3);

@@ -4,9 +4,88 @@
     padding: 0;
 }
 
-body {
-    background-color: #333;
+.Bannière {
+    display: flex;
+    height: 100px;
+    background: linear-gradient(45deg, rgb(97, 95, 95), rgb(30, 29, 29)); /*Dégradé de couleur*/
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 1);
 }
+
+img.Logo {
+    height: 100px;
+    position: absolute;
+    right: 00px;
+    top: 8px;
+}
+
+.Pied {
+    display: flex;
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    background: linear-gradient(1deg, rgb(46, 45, 45), rgb(24, 23, 23)); /*Dégradé de couleur*/
+    color: gold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0, 1);
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: rgb(30, 29, 29);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;  /* VH = VIEWPORT HEIGHT = Hauteur de l'écran (100vh = 100% de la hauteur de l'écran)*/
+    overflow: hidden;
+}
+
+.bubbles{
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    background: gold;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px rgb(84, 72, 2),
+    0 0 50px gold, 
+    0 0 100px gold;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+    background: grey;
+    box-shadow: 0 0 0 10px rgb(63, 62, 62),
+    0 0 50px grey,
+    0 0 100px grey;
+}
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
 
 .container-menu {
     width: 300px;
@@ -21,7 +100,6 @@ body {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    /* background-image: url(../images/logo2.jpg); */
     background-color: #f1f1f1;
     position: absolute;
     top: 50%;
@@ -30,6 +108,9 @@ body {
     z-index: 20;         /*Index de superposition, les autres boutons ont un index plus faible, ils seront donc en dessous.*/
     cursor: pointer;     /*Forme de curseur quand il est au dessus de l'élement*/
 }
+
+
+/*Ligne du bouton*/
 
 .ligne {
     width: 40px;
@@ -69,7 +150,7 @@ body {
     transform: translateY(10px) rotate(-45deg);
 }
 
-.container-menu.active .ligne {
+.container-menu.active .ligne {             /*Rotation pour former une croix*/
     background: transparent;
 }
 .container-menu.active .ligne::after {
@@ -97,7 +178,7 @@ body {
 
 .blob-1 {
     background:#e0fefe ;
-    transition: all 0.1s 0.1s ease-in-out;
+    transition: all 0.1s 0.2s ease-in-out;
 }
 
 .blob-2 {
@@ -105,34 +186,24 @@ body {
     transition: all 0.1s 0.2s ease-in-out;
 }
 
-.blob-3 {
-    background:#ffdac1 ;
-    transition: all 0.1s 0.3s ease-in-out;
-}
-
 .blob-4 {
     background:#ff9aa2 ;
-    transition: all 0.1s 0.4s ease-in-out;
+    transition: all 0.1s 0.2s ease-in-out;
 }
 
 .blob-5 {
     background:#ffffd8 ;
-    transition: all 0.1s 0.5s ease-in-out;
+    transition: all 0.1s 0.2s ease-in-out;
 }
 
 .blob-6 {
     background:#b5ead7 ;
-    transition: all 0.1s 0.6s ease-in-out;
-}
-
-.blob-7 {
-    background:gold ;
-    transition: all 0.1s 0.7s ease-in-out;
+    transition: all 0.1s 0.2s ease-in-out;
 }
 
 .blob-8 {
     background:darksalmon ;
-    transition: all 0.1s 0.8s ease-in-out;
+    transition: all 0.1s 0.2s ease-in-out;
 }
 
 /*Animation*/
@@ -144,10 +215,6 @@ body {
 .container-menu.active .blob-2 {
     top: 85%;
     left: 85%;
-}
-
-.container-menu.active .blob-3 {
-    top: 100%;
 }
 
 .container-menu.active .blob-4 {
@@ -163,10 +230,6 @@ body {
 .container-menu.active .blob-6 {
     top: 15%;
     left: 15%;
-}
-.container-menu.active .blob-7 {
-    top: 0%;
-    left: 50%;
 }
 
 .container-menu.active .blob-8 {
